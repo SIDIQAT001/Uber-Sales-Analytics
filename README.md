@@ -43,10 +43,51 @@ Before the commencement of the analysis, the data was examined which included pr
 
 
 ## Data Preprocessing
-The data was then preprocessed by:
-* Handling the missing values :
+The data had to be adequately prepared before moving ahead with our analysis therefore, :
+* Handling the missing values by removing data :
 ``` python
 # Dropping off data fields with so much missing values
 df.drop(["Cancelled Rides by Customer","Reason for cancelling by Customer","Cancelled Rides by Driver","Driver Cancellation Reason","Incomplete Rides","Incomplete Rides Reason"],axis=1,inplace=True)
 ``` 
+
+
+
+# Replacing missing values in our numerical fields with median 
+```python
+# replacing the missing avg vtat with the median
+df['Avg VTAT'].fillna(df['Avg VTAT'].median(),inplace=True)
+
+# replacing the missing avg vtat with the median
+df['Avg VTAT'].fillna(df['Avg VTAT'].median(),inplace=True)
+
+# replacing the missing booking value with the median
+df['Booking Value'].fillna(df['Booking Value'].median(),inplace=True)
+
+
+# replacing the missing Customer rating with the median
+df['Customer Rating'].fillna(df['Customer Rating'].median(),inplace=True)
+
+# replacing the missing Driver Ratings with the median
+df['Driver Ratings'].fillna(df['Driver Ratings'].median(),inplace=True)
+
+# replacing the missing Rides Distance with the median
+df['Ride Distance'].fillna(df['Ride Distance'].median(),inplace=True)
+```
+```python
+## Replacing missing values in the rest of the categorical fields with mode
+# replacing the missing payment method with the mode
+df['Payment Method'] = df['Payment Method'].fillna(df['Payment Method'].mode()[0])
+```
+
+## converting the date field into a proper data 
+# converting the date column to a proper date data# converting the date column to a proper date set
+df['Date'] = pd.to_datetime(df['Date'])
+
+# extracting day from date
+df['Day']= df['Date'].dt.day
+# extract month from date
+df['Month'] = df['Date'].dt.month
+# extract year from date
+df['Year'] = df['Date'].dt.year
+
 
