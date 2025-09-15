@@ -14,7 +14,7 @@ The goal of this analytics is to uncover insights from the data and make valuabl
 
    ## Data and Library Importation
    ```python
-   # importing the necessary Libraries
+   # importing the necessary libraries
 
 import pandas as pd
 import numpy as np
@@ -22,6 +22,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
 warnings.filterwarnings('ignore')
+
+
 ```
 
 ```python
