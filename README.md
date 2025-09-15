@@ -98,5 +98,14 @@ df['Day']= df['Date'].dt.day
 df['Month'] = df['Date'].dt.month
 # extract year from date
 df['Year'] = df['Date'].dt.year
+```
+
+
+
+
+## Business Insights
+1.What is the pattern of the customer bookings
+
+
 
 
