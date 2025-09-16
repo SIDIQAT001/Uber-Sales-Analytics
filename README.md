@@ -110,6 +110,11 @@ df['Year'] = df['Date'].dt.year
 
 It can be observed that a huge portion of the order
 
+## Disribution Of Vehicle type
+![](vehicle_type.png).
+
+
+
 
 
 
